@@ -15,7 +15,7 @@ provider "aws" {
 # Create VPC with public and private subnets
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.18.2"
+  version = "5.21.0"
 
   name = "pluralsight-sandbox-vpc"
   cidr = "10.0.0.0/16"
@@ -36,7 +36,7 @@ module "vpc" {
 # Create EKS cluster
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "20.31.0"
+  version = "20.36.0"
 
   cluster_name    = "pluralsight-sandbox-eks"
   cluster_version = "1.27"
